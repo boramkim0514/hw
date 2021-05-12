@@ -19,3 +19,8 @@ for i in aws.rows:
 
 exf.save('c:\\dd\\outitx.xlsx')
 exf.close()
+
+
+answ #2
+def index(request): 
+    return HttpResponse('<body text=red<h1><hr><br>"오늘은 수요일"<br><hr>')
