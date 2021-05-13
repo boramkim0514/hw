@@ -1,5 +1,5 @@
 
-#1-4q번*********************************************
+#1-4번*********************************************
 ## mysql 연동
 import pymysql as my
 
@@ -44,6 +44,25 @@ c.close()
 
 con.close()
 
+======================================================
 
+mysql> insert into Man values('김연아', 32);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into Man values('손흥민', 30);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into Man values('이강인', 21);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from Man;
++--------+------+
+| name   | age  |
++--------+------+
+| 김연아 |   32 |
+| 손흥민 |   30 |
+| 이강인 |   21 |
++--------+------+
+3 rows in set (0.00 sec)
 
 
