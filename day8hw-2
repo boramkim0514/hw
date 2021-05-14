@@ -1,0 +1,110 @@
+
+계정을 생성하시오.
+계정명 : ai, passwd : aiai
+사용DB : aidb
+
+새로운 connection 만들기 
+
+테이블 생성 : aitab 
+
+select  user();
+use aidb;
+show tables;
+
+create table aitab (
+	id int auto_increment primary key,
+	name varchar(20),
+    kor tinyint,
+    eng tinyint,
+    mat tinyint);
+    
+테이블에 insert후 select하기
+총점 역순으로 출력 
+
+결과 화면 캡쳐해서 올려주세요.
+
+mysql> select user();
++----------------+
+| user()         |
++----------------+
+| root@localhost |
++----------------+
+1 row in set (0.00 sec)
+mysql> exit
+Bye
+
+C:\Users\CPB06GameN>mysql -u aii -paiai
+
+mysql> select user();
++---------------+
+| user()        |
++---------------+
+| aii@localhost |
++---------------+
+1 row in set (0.00 sec)
+
+
+mySQL ===============================
+
+select user();
+use aidb;
+show tables;
+-- create table aitab(
+-- id int auto_increment primary key, 
+-- name varchar(20), 
+-- kor tinyint,
+-- eng tinyint,
+-- mat tinyint);
+
+insert into aitab(name, kor, eng, mat) values('이순신',85,87,90);
+insert into aitab(name, kor, eng, mat) values('강감찬',75,80,90);
+insert into aitab(name, kor, eng, mat) values('한석봉',99,98,99);
+insert into aitab(name, kor, eng, mat) values('황진이',35,45,20);
+insert into aitab(name, kor, eng, mat) values('안중근',90,85,90);
+insert into aitab(name, kor, eng, mat) values('박문수',95,98,96);
+insert into aitab(name, kor, eng, mat) values('임꺽정',15,35,45);
+insert into aitab(name, kor, eng, mat) values('김정호',90,95,80);
+insert into aitab(name, kor, eng, mat) values('정몽주',90,90,95);
+insert into aitab(name, kor, eng, mat) values('양주종',50,45,60);
+select name, (kor+eng+mat) as '총점' from aitab order by (kor+eng+mat) desc;
+select * from aitab;
+-- select name, kor, eng, mat from aitab; -- equal to -> select * from aitab; 
+
+===============결과값
+mysql> select * from aitab;
+ERROR 1046 (3D000): No database selected
+mysql> use aidb;
+Database changed
+mysql> select * from aitab;
++----+--------+------+------+------+
+| id | name   | kor  | eng  | mat  |
++----+--------+------+------+------+
+|  1 | 이순신 |   85 |   87 |   90 |
+|  2 | 강감찬 |   75 |   80 |   90 |
+|  3 | 한석봉 |   99 |   98 |   99 |
+|  4 | 황진이 |   35 |   45 |   20 |
+|  5 | 안중근 |   90 |   85 |   90 |
+|  6 | 박문수 |   95 |   98 |   96 |
+|  7 | 임꺽정 |   15 |   35 |   45 |
+|  8 | 김정호 |   90 |   95 |   80 |
+|  9 | 정몽주 |   90 |   90 |   95 |
+| 10 | 양주종 |   50 |   45 |   60 |
++----+--------+------+------+------+
+10 rows in set (0.00 sec)
+
+mysql> select name, (kor+eng+mat) as '총점' from aitab order by (kor+eng+mat) desc;
++--------+------+
+| name   | 총점 |
++--------+------+
+| 한석봉 |  296 |
+| 박문수 |  289 |
+| 정몽주 |  275 |
+| 안중근 |  265 |
+| 김정호 |  265 |
+| 이순신 |  262 |
+| 강감찬 |  245 |
+| 양주종 |  155 |
+| 황진이 |  100 |
+| 임꺽정 |   95 |
++--------+------+
+10 rows in set (0.00 sec)
