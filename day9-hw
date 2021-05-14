@@ -1,0 +1,8 @@
+▶▶▶ 9일차 오전 도전과제 - 순차적으로 완성해 나가세요.
+
+  
+1> 계정(account) 추가  -- mysql, root계정으로 작업
+   id : mymy,  pw : 7777
+   사용DB : mydb
+
+2> mymy계정으로 mysql에 접속 
