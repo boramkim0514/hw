@@ -3,7 +3,7 @@
 ## mysql 연동
 import pymysql as my
 
-con = my.connect(host='127.0.0.1', user='root', password='25722357', db='mydb')
+con = my.connect(host='127.0.0.1', user='root', password='****', db='mydb')
 c = con.cursor()
 
 c.execute('insert into movie values("명량", "최민식", 1761)') 
